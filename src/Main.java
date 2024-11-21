@@ -1,44 +1,337 @@
-import java.util.Scanner;
 public class Main {
-   public static void main(String[] args) {
-//day4,3给定两个整型数组，本题要求找出不是两者共有的元素。
+    public static void main(String[] args) {
+        cpx a = new cpx(1, 2);
+        cpx b = new cpx(3, 4);
+        cpx c = new cpx.add(a, b);
+        System.out.println("a+b=" + c);
+        cpx d = cpx.sub(a, b);
+        System.out.println("a-b=" + d);
+        cpx e = cpx.mul(a, b);
+        System.out.println("a*b=" + e);
+        c.add(a);
+        System.out.println("After c.add(a),c=" + c);
+        c.sub(a);
+        System.out.println("After c.sub(a" + c);
+        c.mul(a);
+        System.out.println("After c.mul(a)" + c);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//    //day6.3主函数
+//    public static void main(String[] args) {
+//        lei lei1 =new lei();
+//        System.out.println("square:"+ lei1.wow());
+//        lei1.setSide(5.0);
+//        System.out.println(lei1.wow());
+//        lei1.setSide(-3.0);
+//        System.out.println(lei1.wow());
+//        lei lei2 =new lei(4.0);
+//        System.out.println(lei2.wow());
+//        lei2.setSide(10.0);
+//        System.out.println(lei2.wow());
+//        }
+//    }
+
+////day5.5递归函数：（本题，课堂上已完成框架）
+////本题要求实现Ackermenn函数的计算，其函数定义如下：
+////WP:主函数过程给了直接写进去，要写的是计算过程的函数,而且有视频教程，跟着视频做就好了
+//Scanner scan=new Scanner(System.in);
+//long m=scan.nextInt();
+//long n=scan.nextInt();
+//        if(m<0 ||n <0){
+//        System.out.println("您输入的数字小于0了请重新输入:(");
+//            return;
+//                    }
+//                    System.out.println(wow(m,n));
+//
+//        }
+//public static long wow(long m,long n){
+//    if(m ==0)
+//        return n +1;
+//    else if (n ==0 && m >0)
+//        return wow(m -1,1);
+//    else
+//        return wow(m -1,wow(m, n -1));
+//    //循环和递归的区别是
+//    //循环：直接在同一个地方反复执行代码，直到满足条件。
+//    //递归：每次调用自己，就好像在新的地方“重新开始”，直到达到停止条件。
+//    //递归通过“调用栈”来记录每次调用的状态，一旦满足条件，它会逐层返回并计算结果。
+//}
+
+
+////day5.4递归：幂级数
+////本题要求实现一个函数，计算下列简单交错幂级数的部分和：
+////函数接口定义：double fn( double x, int n );
+////其中题目保证传入的n是正整数，并且输入输出都在双精度范围内。函数fn
+//// 应返回上述级数的部分和。建议尝试用递归实现。
+//
+//
+////WP:EZ题目，利用math.pow递归即可解决；
+//Scanner ac=new Scanner(System.in);
+//        System.out.println("请输入x和n，其中n必须为正整数哦:D");
+//double x=ac.nextDouble();
+//int n=ac.nextInt();
+//double wo=wow(x,n);
+//            System.out.printf("算出来啦！%.2f\n",wo);
+//    }
+//public static double wow(double x,int n){
+//// OK让我们来到递归函数这边上面都是基操哈
+//    //首先我们要知道什么叫递归函数，递归就像像照镜子一样：
+//    // 镜子里有一个人，镜子里的人又拿着一个镜子，里面又有一个人，巴拉巴拉无限下去
+//    // 但最终总会有终点。所以阶乘就是类似于递归函数的一个特性
+//    //但是我们要给他一个明确的终止条件，让他停下来，否则就会无限循环下去
+//    //从这题来看，x的次方就是n所以当我们的n=1的时候就是x的时候我们停止下来;
+//    if(n==1){
+//        return x;
+//    }
+//    double l=Math.pow(-1,n-1)*Math.pow(x,n);//最末尾的(-1)^(n-1) * x^n
+//    //接下来我们要做的就是无限的累加n-1项，直到n=1的时候停止累加
+//    return l+wow(x,n-1);
+//}
+//
+//}
+
+
+
+////day5.3本题要求实现一个计算m~n（m<n）之间所有整数的和的简单函数。
+////函数接口定义：int sum( int m, int n );
+////其中m和n是用户传入的参数，保证有m<n。函数返回的是m~n之间所有整数的和。
+////自己完成主函数，及函数调用。
+////输入样例：-5 8
+////输出样例：sum = 21
+//public static void main(String[] args) {
+//    //WP:EZ题目，跟之前的阶乘区别差不多，只不过把*改成+就好,只不过这里需要用到另一个函数所以需要定义一个新的函数接口定义
+//    Scanner ac=new Scanner(System.in);
+//    int []c=new int[2];
+//    System.out.println("请输入m<n的规则OVO");
+//    for(int i=0;i<2;i++){
+//        c[i]=ac.nextInt();
+//    }
+//    if(c[0]>c[1] ){
+//        System.out.println("你输入的数字不满足m<n的规则哦，请重新输入");
+//        return;
+//    }
+//    int wo=wow(c[0],c[1]);
+//    System.out.println(wo);此时wo就等于已经计算好的c
+//}
+////新建一个方法，用来处理大部分计算，使main更简洁
+//public static int wow(int a,int b){
+//    int c=0;
+//    for(int i=a;i<=b;i++){//起始数字为a=i从i位开始，然到b，c递加i就达到了-5-8之间所有的整数相加
+//        c+=i;
+//        //System.out.println(c);
+//    }
+//    return c;//将计算好的c值返回
+//}
+
+
+
+
+
+
+
+
+
+//day5.2鞍点：二维数组
+//        //一个矩阵元素的“鞍点”是指该位置上的元素值在该行上最大、在该列上最小。
+//        //本题要求编写程序，求一个给定的n阶方阵的鞍点。
+//        //输入第一行给出一个正整数n（1≤n ≤6）。随后n行，每行给出n个整数，其间以空格分隔。
+//        //输出在一行中按照“行下标 列下标”（下标从0开始）的格式输出鞍点的位置。
+//        // 如果鞍点不存在，则输出“NONE”。题目保证给出的矩阵至多存在一个鞍点。
+//            //1.行上的最大值：在该元素所在的行中，它是这一行的最大值。
+//            //2.列上的最小值：在该元素所在的列上，它是这一列的最小值。
+//        Scanner ac=new Scanner(System.in);
+//        System.out.println("请输入一个正整数在[1,6]之间");
+//            int n=ac.nextInt();
+//                if(n<1 ||n >6){
+//                    System.out.println("请输入[1,6]之间的正整数O.o");
+//                    return;
+//                }
+//                System.out.println("您输入了"+n+"，将输输出"+n+"行"+n+"个数字！OVO");
+//            int [][]c=new int[n][n];
+//                for(int i=0;i<n;i++){
+//                    for(int j=0;j<n;j++){
+//                        c[i][j]=ac.nextInt();//第一个循环用来往数组里面输入东西
+//                    }
+//                }
+//                int bo=0;//跟下面的if衔接来判断是否有多余的值
+//                boolean yz=false;//模仿者哨兵知道吧，被狼刀了就直接报警，性质一样
+//                    for(int i=0;i<n;i++){//套两层循环的意义在于遍历行和列
+//                        int m=c[i][0];//假设这行的这个第一个数字是最大值然后后面一个一个比较过去
+//                        int b=0;//用来记录当前最大值的列号
+//                            for(int j=1;j<n;j++){
+//                                if(c[i][j]>m){//如果发现比m大的数
+//                                    m=c[i][j];//然后就把数字重新赋到m啦
+//                                    b=j;//此时用b来记录下j当时的数字即数组的索引
+//                                }
+//                            }
+//                            yz=true;//这个时候假设这个最大值可能是鞍点，之后做后续的判断
+//                            for (int k=0;k<n;k++){//上面遍历列，这里遍历行
+//                                if(k==i) continue;//因为当前行已经检查过了，所以此时k=i的话就直接跳过，避免重复检查
+//                                if(c[k][b]<m){//如果该列中有值比最大值小
+//                                    yz=false;//给他标记为不是鞍点，所以就不是啦
+//                                    break;//然后就退出啦
+//                                }
+//                            }
+//                            if(yz){
+//                                System.out.println(i+" "+b);//如果yz为true，即哨兵活了下来那就是侦探团胜利
+//                                bo++;//如果找到了则记录有多少个数量
+//                                break;//找到后直接退出
+//                            }
+//                    }
+//                    if(bo==0){//如果没有的话就提示什么都没有
+//                        System.out.println("什么都没有哦XD");
+//                    }
+//有视频案例跟着做就能明白
+
+
+
+//day4.6本题要求编写程序，找出给定的n个数中的最大值及其对应的最小下标（下标从0开始）。
+//输入格式:
+//输入在第一行中给出一个正整数n（1＜n≤10）。第二行输入n个整数，用空格分开。
+//输出格式:
+//在一行中输出最大值及最大值的最小下标，中间用一个空格分开。
+
+       //注释:下标（也称索引）是指数组或列表中元素的位置编号，用来标识和访问特定元素。
+       // 通常，数组的下标从 0 开始，也就是说，数组的第一个元素的下标为 0，第二个元素的下标为 1
+       //所以这题考察的就是输入几个数字，然后如果数组中有相同的数字，就看他们的数组索引（即下表）是几并且将这个最大值输出出来，比如说
+       //a[0]=10,a[1]=10,a[2]=5,a[3]=6,在这4个索引（即下标中）a[0]和a[1]相比，0<1所以 0就是10的最小下标
+//       Scanner ac=new Scanner(System.in);
+//        int n =ac.nextInt();
+//        int []a=new int[n];
+//            for(int i=0;i<n-1;i++){
+//                a[i]=ac.nextInt();
+//            }
+//            //max 最大值，index
+//       int max=a[0],index=0;
+//            for(int i=1;i<n;i++){
+//                if(a[i]>max){//如果当前的元素更大，那么更新最大值和下标
+//                    //不写等于防止下标错乱，要的是最小下标
+//                        max=a[i];
+//                        index=i;
+//                }
+//            }
+//            System.out.println(max+" "+index);
+//    }
+//}
+
+
+//day4.5上三角矩阵指主对角线以下的元素都为0的矩阵；主对角线为从矩阵的左上角至右下角的连线。
+////本题要求编写程序，判断一个给定的方阵是否上三角矩阵。
+////输入第一行给出一个正整数T，为待测矩阵的个数。接下来给出T个矩阵的信息：每个矩阵信息的第一行给出一个不超过10的正整数n。随后n行，每行给出n个整数，其间以空格分隔。
+////每个矩阵的判断结果占一行。如果输入的矩阵是上三角矩阵，输出“YES”，否则输出“NO”。
+//       Scanner a=new Scanner(System.in);//创建用户输入对象
+//       int s=a.nextInt();
+//       //接下来我们遍历数组，这是数组项目必须要的，一定要遍历数 组哦
+//       for(int i=0;i<s;i++){
+//           int c=a.nextInt();//读取当前矩阵的大小有多大（nxn的矩阵）
+//           //接下来我们要创建二维数组啦！
+//           int[][]w=new int[c][c];//创建二维数组
+////然后我们遍历二维数组
+//           for(int k=0;k<c;k++){//遍历二维数组的每一行
+//               for(int l=0;l<c;l++){//遍历二维数组的每一列
+//            w[k][l]=a.nextInt();//存储矩阵中的每个元素
+//               }
+//           }
+//           boolean h=true;
+//           //设置一个布尔变量方便后续检查是否正确
+//           for(int k=1;k<c;k++){//遍历对角线的元素i>j的元素
+//               //从第二行卡死hi遍历，因为第一行的主对角线以下没有元素
+//               for(int l=0;l<i;l++){//在遍历j从0到i-1
+//                   if(w[k][l]!=0){//如果主对角线以下元素不为0
+//                       h=false;//如果为了0则设为false
+//                       break;//退出循环
+//                   }
+//               }
+//               if(!h){//根据上面的循环来看如果循环得出的最终结果h为否，则直接退出大循环
+//                   break;
+//               }
+//           }
+//           if(h){
+//               System.out.println("YES");//终于到了喜闻乐见的输出结果了，鬼知道我到这一步用了多久....
+//           }else{
+//               System.out.println("NO");
+//           }
+//       }
+
+
+
+//day4.4英文辅音字母是除A、E、I、O、U以外的字母。本题要求编写程序，统计给定字符串中大写辅音字母的个数。
+//输入格式：
+//输入在一行中给出一个不超过80个字符、并以回车结束的字符串。
+//输出格式：
+//输出在一行中给出字符串中大写辅音字母的个数。
+//输入样例：
+//Plain TextHELLO World!
+//输出样例：
+//4
+//    Scanner ac=new Scanner(System.in);
+//               System.out.println("输入你要鉴定的字符串");
+//               String s=ac.nextLine(); // 获取输入字符串
+//               int w = 0;
+//
+//               // 遍历字符串里的每一个字符哦，后面可以方便调用
+//               for (int i=0;i<s.length();i++) {
+//                   char b=s.charAt(i); // 这里的char获取当前字符
+//       判断b是否为大写字母，大写字母在ASCII中是从A-Z的，所以前面&&这个是用来确定是否是大写字母的
+//       !利用感叹号来排除掉AEIOU的这几个字母，以此来判断其他的就是元音字母
+//                   if (b>='A'&&b<='Z'&&b!='A'&&b!='E'&&b!='I'&&b!='O'&&b!='U')
+//       字符串跟元音字母进行比较
+//                       {
+//                       w++;
+//                   }
+//               }
+//               System.out.println(w);
+
+
+
+
+
+//day4,3给定两个整型数组，本题要求找出不是两者共有的元素。（这题做完发现做反了，但是代码结构和逻辑是差不多的）
 //输入格式:
 //输入分别在两行中给出两个整型数组，每行先给出正整数N（≤20），随后是N个整数，其间以空格分隔。
 //输出格式:
 //在一行中按照数字给出的顺序输出不是两数组共有的元素，数字间以空格分隔，但行末不得有多余的空格。题目保证至少存在一个这样的数字。同一数字不重复输出。
-        Scanner ac=new Scanner(System.in);
-        StringBuilder w=new StringBuilder();//引用之前学会的StringBuilder追加字符串中最后的拼接可以免去很多
-       System.out.println("请输入你要输入几个数字必须<=20");
-        int l=ac.nextInt();
-                int []c=new int[l];
-                int []b=new int[l];
-                System.out.println("请输入你要判断的第一组数字");
-            for(int i=0;i<l;i++){
-                c[i]=ac.nextInt();
-            }
-                System.out.println("请输入你要判断的第二组数字");
-            for(int i=0;i<l;i++){
-                b[i]=ac.nextInt();
-            }
-            boolean s=false;
-                for(int i=0;i<l;i++){
-                    if(c[i]!!b[i]){
-                        w.append(c[i]).append(" ");//将数组c[i]相同的以字符加入到w变量中
-                    s=true;
-                    }
-                }
-                if(s){
-                    System.out.println("相同的数字有" +"，"+ w.toString());//打印已经拼接起来的字符串
-                }else{
-                    System.out.println("你输入的两组数字中并没有相同的");
-                }
+//        Scanner ac=new Scanner(System.in);
+//        StringBuilder w=new StringBuilder();//引用之前学会的StringBuilder追加字符串中最后的拼接可以免去很多步骤
+//       System.out.println("请输入你要输入几个数字必须<=20");
+//        int l=ac.nextInt();
+//                int []c=new int[l];
+//                int []b=new int[l];
+//                System.out.println("请输入你要判断的第一组数字");
+//            for(int i=0;i<l;i++){
+//                c[i]=ac.nextInt();
+//            }
+//                System.out.println("请输入你要判断的第二组数字");
+//            for(int i=0;i<l;i++){
+//                b[i]=ac.nextInt();
+//            }
+//            boolean s=false;
+//                for(int i=0;i<l;i++){
+//                    if(c[i]==b[i]){
+//                        w.append(c[i]).append(" ");//将数组c[i]相同的以字符加入到w变量中
+//                    s=true;
+//                    }
+//                }
+//                if(s){
+//                    System.out.println("相同的数字有" +"，"+ w.toString());//打印已经拼接起来的字符串
+//                }else{
+//                    System.out.println("你输入的两组数字中并没有相同的");
+//                }
 
 
 
-
-
-         }
-   }
 
 //day4.2
 //      System.out.println("请输入你要输入几个数字");
