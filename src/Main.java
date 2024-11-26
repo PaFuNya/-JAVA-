@@ -1,5 +1,28 @@
-import java.util.Scanner;
-
+////day9.3
+//import java.util.Scanner;
+//public class Main {
+//    public static void main(String[] args){
+//        Scanner ac=new Scanner(System.in);
+//
+//        System.out.println("请输入你你要计算的正方形边长");
+//        double sq=ac.nextDouble();
+//        System.out.println("请输入矩形的长");
+//        double lent=ac.nextDouble();
+//        System.out.println("请输入矩形的宽");
+//        double wid=ac.nextDouble();
+//            sa[] shap=new sa[2];//保存着sa类的数组
+//            shap[0]=new sqa(sq);//保存正方形对象
+//            shap[1]=new rla(lent,wid);//保存矩形对象
+//        //数组 shap 中存放的是类型为 sa 的对象（sa 是一个抽象类，而 sqa 和 rla 是它的子类）
+//            for(sa shape:shap){
+////shape 是 for-each 循环中的临时变量，用于依次访问数组中的每个元素。每次循环，shape 指向数组中的一个对象：
+////第一次：shape 指向 shap[0]，也就是 sqa 的对象。
+////第二次：shape 指向 shap[1]，也就是 rla 的对象。
+//                System.out.println(shape.getSan());
+//                System.out.println(shape.getArea());
+//            }
+//    }
+//}
 ////day9.2
 //public class Main {
 //    public static void main(String[] args) {

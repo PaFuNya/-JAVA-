@@ -1,53 +1,54 @@
-//抽象类是父类设置的一个抽象的类，他下面的抽象方法是没有具体实现的
-//一旦子类继承了抽象类，则必须给这个抽象方法实体化出来，否则就会报错
-//比如说A（子类）找B（父类）借钱，如果A不还B的钱（如果不给抽象方法实现出来）
-//则B会杀了A（报错），所以A在B生命的威胁下必须给B还钱（抽象方法实现出来）
-//这样A就不会被杀（程序运行正常）
-//abstract class A这里定义了一个抽象类，他下面的
-//abstract void w()这里是抽象方法，
-//如果有个子类继承了A也就是
-//class b extends a{}
-//则b的有个方法就得实现A的抽象方法
-//@Override
-//void w(){
-//System.out.println("www");这里就是抽象方法具体实现，这是必须的，否则就会报错
-// }
-abstract class sa {//定义抽象类
-    protected String san;
-
-    public String getSan() {
-        return san;
-    }
-    abstract double getarea();//定义抽象方法，抽象方法没有花括号{}
-}
-class sqa extends sa {
-    public double side;
-
-    public sqa(double side) {
-        this.side = side;
-        this.san = "Square";
-    }
-
-    @Override
-//实现其抽象超类的 getArea 方法，如果不实现就会报错哦
-    double getarea() {
-        return side * side;//返回正方形的值
-    }
-}
-class rla extends sa{
-    private double cl;
-    private double wi;
-
-    public rla(double cl,double wi) {
-        this.cl=cl;
-        this.wi=wi;
-        this.san="Rectangle";
-    }
-    @Override//实现其抽象超类的 getArea 方法，如果不实现就会报错哦
-    double getarea() {
-        return cl*wi;//计算返回的矩形的面积
-    }
-}
+//day9.3外部类
+////抽象类是父类设置的一个抽象的类，他下面的抽象方法是没有具体实现的
+////一旦子类继承了抽象类，则必须给这个抽象方法实体化出来，否则就会报错
+////比如说A（子类）找B（父类）借钱，如果A不还B的钱（如果不给抽象方法实现出来）
+////则B会杀了A（报错），所以A在B生命的威胁下必须给B还钱（抽象方法实现出来）
+////这样A就不会被杀（程序运行正常）
+////abstract class A这里定义了一个抽象类，他下面的
+////abstract void w()这里是抽象方法，
+////如果有个子类继承了A也就是
+////class b extends a{}
+////则b的有个方法就得实现A的抽象方法
+////@Override
+////void w(){
+////System.out.println("www");这里就是抽象方法具体实现，这是必须的，否则就会报错
+//// }
+//abstract class sa {//定义抽象类
+//    protected String san;
+//
+//    public String getSan() {
+//        return san;
+//    }
+//    abstract double getArea();//定义抽象方法，抽象方法没有花括号{}
+//}
+//class sqa extends sa {
+//    private double side;
+//
+//    public sqa(double side) {
+//        this.side = side;
+//        this.san = "Square";
+//    }
+//
+//    @Override
+////实现其抽象超类的 getArea 方法，如果不实现就会报错哦
+//    double getArea() {
+//        return side * side;//返回正方形的值
+//    }
+//}
+//class rla extends sa{
+//    private double cl;
+//    private double wi;
+//
+//    public rla(double cl,double wi) {
+//        this.cl=cl;
+//        this.wi=wi;
+//        this.san="Rectangle";
+//    }
+//    @Override//实现其抽象超类的 getArea 方法，如果不实现就会报错哦
+//    double getArea() {
+//        return cl*wi;//计算返回的矩形的面积
+//    }
+//}
 
 
 
