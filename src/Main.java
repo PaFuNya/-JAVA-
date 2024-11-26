@@ -1,19 +1,7 @@
-public class Main {
-    public static void main(String[] args) {
-        cpx a = new cpx(1, 2);
-        cpx b = new cpx(3, 4);
-        cpx c = new cpx.add(a, b);
-        System.out.println("a+b=" + c);
-        cpx d = cpx.sub(a, b);
-        System.out.println("a-b=" + d);
-        cpx e = cpx.mul(a, b);
-        System.out.println("a*b=" + e);
-        c.add(a);
-        System.out.println("After c.add(a),c=" + c);
-        c.sub(a);
-        System.out.println("After c.sub(a" + c);
-        c.mul(a);
-        System.out.println("After c.mul(a)" + c);
+//day9.2
+public class Main{
+    public static void Main(String[] args){
+            man ac=new man("hhhh","aaaaa",20000.0);
     }
 }
 
@@ -28,7 +16,52 @@ public class Main {
 
 
 
-//    //day6.3主函数
+
+
+
+//day6.4
+//public class Main{
+//    public  static void main(String[] arga){
+//      sti ac=new sti("wow","aaa",1000.00);
+//      ac.in(200);
+//      System.out.println(ac.getBh());
+//      System.out.println(ac.getMoney());
+//      System.out.println(ac.getName());
+//      System.out.println(ac.getZs());
+//      System.out.println(ac.asd());
+//    }
+//}
+//
+
+
+
+
+
+//day6.2主函数代码
+//public class Main {
+//    public static void main(String[] args) {
+//        cpx a = new cpx(1, 2);
+//        cpx b = new cpx(3, 4);
+//        cpx c = cpx.add(a, b);
+//        System.out.println( c);
+//        cpx d = cpx.sub(a, b);
+//        System.out.println( d);
+//        cpx e = cpx.mul(a, b);
+//        System.out.println(e);
+//        c.add(a);
+//        System.out.println(c);
+//        c.sub(a);
+//        System.out.println( c);
+//        c.mul(a);
+//        System.out.println( c);
+//    }
+//}
+
+
+
+
+
+//    //day6.1主函数
 //    public static void main(String[] args) {
 //        lei lei1 =new lei();
 //        System.out.println("square:"+ lei1.wow());
@@ -42,6 +75,9 @@ public class Main {
 //        System.out.println(lei2.wow());
 //        }
 //    }
+
+
+
 
 ////day5.5递归函数：（本题，课堂上已完成框架）
 ////本题要求实现Ackermenn函数的计算，其函数定义如下：
