@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 //day9.2
 public class Main {
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
 //        Scanner ac=new Scanner(System.in);
 //        int []a=new int[];
 //        System.out.println("请输入你要计算多少个员工的名字");
@@ -14,7 +14,10 @@ public class Main {
         Emp emp = new Emp("001", "我是员工", 3);
         Mang mang = new Mang("002", "我是经理", 4);
         Ds ds = new Ds("003", "我是董——事——长！", 6);
-
+        //这里搞半天才发现自己的打印信信息方法忘了加了呃呃呃呃我就说怎么没有输出呵呵
+        emp.ygx();
+        mang.ygx();
+        ds.ygx();
     }
 }
 

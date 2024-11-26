@@ -20,7 +20,7 @@ class Emp{
     }
     //接下来我们定义一个方法来算经理的工资，具体的逻辑运算交给后面的子类去处理
     public double man(){
-        return man();
+        return jb();
     }
     //打印员工信息
     public void ygx(){
