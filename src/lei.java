@@ -37,8 +37,23 @@ class Mang extends Emp{
     public Mang(String id,String name,int qj){
         super(id,name,qj);
     }
-
-
+    //@Override是用来重写父类的方法，下面开始重写man方法
+    //上面的man方法不是只有一个return么，这边重写他
+    //但是他不会改变父类的方法，只是在这里改一下
+    @Override
+    public double man(){
+        return jb()+(jb()*0.2)+(jb()*0.5+500);
+    }
+}
+//上面的的经理计算完了之后我们来计算董的工资同样的m多大区别
+class Ds extends Emp{
+    public Ds(String id,String name ,int qj){
+        super(id,name,qj);
+    }
+    @Override//重写父类的man方法并写入董事的的工资
+    public double man(){
+        return jb()+(jb()*0.08)+(jb()*0.3)+2000+3000;
+    }
 }
 
 ////day6.4

@@ -1,7 +1,20 @@
+import java.util.Scanner;
+
 //day9.2
-public class Main{
-    public static void Main(String[] args){
-            man ac=new man("hhhh","aaaaa",20000.0);
+public class Main {
+    public static void Main(String[] args) {
+//        Scanner ac=new Scanner(System.in);
+//        int []a=new int[];
+//        System.out.println("请输入你要计算多少个员工的名字");
+//        System.out.println("请输入第一个员工的编号，名字，和请假天数");
+//        for(int i=0;i<0;i++){
+//            a[i]=ac.nextInt();
+//        }
+//   }
+        Emp emp = new Emp("001", "我是员工", 3);
+        Mang mang = new Mang("002", "我是经理", 4);
+        Ds ds = new Ds("003", "我是董——事——长！", 6);
+
     }
 }
 
