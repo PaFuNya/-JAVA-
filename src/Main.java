@@ -1,3 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Circle circle=new Circle(1.0);//生成Circle对象。
+        Random r=new Random();//生成Random对象：Random r = new Random();
+        int ra=r.nextInt(101);//生成随机整数：r.nextInt()
+        Shape shape;
+            if(ra % 2==0){
+                shape=new Square(5);
+                //如果此时为偶数，则将5传递进去
+            }else{
+                shape=new Circle(4);
+                //如果此时为奇数，则将4传递进去
+            }
+            System.out.println("当前随机数为"+ra);//输出当前的随机数
+            System.out.println(shape.toString());//最后输出上面判断的计算的值
+            System.out.println(circle.toString());//调用对象的toString方法，输出对象的描述信息。
+    }
+}
+
+
+
+
+
+
+
+
+
+
 ////day9.3
 //import java.util.Scanner;
 //public class Main {
