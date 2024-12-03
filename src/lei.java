@@ -1,47 +1,67 @@
-import java.awt.*;
-import java.util.*;
-//接口interface是比abstract抽象函数还要抽象的存在
-//他连字段都不能有
-class Circle implements Shape {//他和abstract一样，一旦调用了就必须使用@Override
-    //重写方法去实现它
-    //否则就会报错
-    private double radius;
-    public Circle(double r){
-        this.radius=r;
-    }
-    @Override
-    public double getPerimeter(){
-        return 2*Math.PI*radius;//计算圆的周长
-    }
-    @Override
-    public double getArea(){
-        return Math.PI*radius*radius;//计算圆的面积
-    }
-    @Override
-    public String toString(){
-        return String.format("radius=%.2f, perimeter=%.2f, area=%.2f",radius,getPerimeter(),getArea());
-    }//使用format输出计算好的值
-}
-class Square implements Shape{
-    private double side;
-    public Square(double s){
-        this.side=s;
-    }
-    @Override
-    public double getArea(){
-        return side*side;//正方形的边长
-    }
-    @Override
-    public double getPerimeter(){
-        return 4*side;//正方形的面积
-    }
-    @Override
-    public String toString(){
-        return String.format("side=%.2f, perimeter=%.2f, area=%.2f",side,getPerimeter(),getArea());
-    }//format输出正方形的面积和周长还有边长等
-}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//day8.7Circle类和Shape类
+//import java.awt.*;
+//import java.util.*;
+////接口interface是比abstract抽象函数还要抽象的存在
+////他连字段都不能有
+//class Circle implements Shape {//他和abstract一样，一旦调用了就必须使用@Override
+//    //重写方法去实现它
+//    //否则就会报错
+//    private double radius;
+//    public Circle(double r){
+//        this.radius=r;
+//    }
+//    @Override
+//    public double getPerimeter(){
+//        return 2*Math.PI*radius;//计算圆的周长
+//    }
+//    @Override
+//    public double getArea(){
+//        return Math.PI*radius*radius;//计算圆的面积
+//    }
+//    @Override
+//    public String toString(){
+//        return String.format("radius=%.2f, perimeter=%.2f, area=%.2f",radius,getPerimeter(),getArea());
+//    }//使用format输出计算好的值
+//}
+//class Square implements Shape{
+//    private double side;
+//    public Square(double s){
+//        this.side=s;
+//    }
+//    @Override
+//    public double getArea(){
+//        return side*side;//正方形的边长
+//    }
+//    @Override
+//    public double getPerimeter(){
+//        return 4*side;//正方形的面积
+//    }
+//    @Override
+//    public String toString(){
+//        return String.format("side=%.2f, perimeter=%.2f, area=%.2f",side,getPerimeter(),getArea());
+//    }//format输出正方形的面积和周长还有边长等
+//}
 
 
 

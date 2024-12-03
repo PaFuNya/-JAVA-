@@ -1,26 +1,59 @@
-import java.util.*;
-public class Main {
-    public static void main(String[] args){
-        Circle circle=new Circle(1.0);//生成Circle对象。
-        Random r=new Random();//生成Random对象：Random r = new Random();
-        int ra=r.nextInt(101);//生成随机整数：r.nextInt()
-        Shape shape;
-            if(ra % 2==0){
-                shape=new Square(5);
-                //如果此时为偶数，则将5传递进去
-            }else{
-                shape=new Circle(4);
-                //如果此时为奇数，则将4传递进去
-            }
-            System.out.println("当前随机数为"+ra);//输出当前的随机数
-            System.out.println(shape.toString());//最后输出上面判断的计算的值
-            System.out.println(circle.toString());//调用对象的toString方法，输出对象的描述信息。
-    }
-}
 
 
 
 
+
+
+
+
+//day8.8
+//import java.util.*;
+//public class Main {
+//    public static void main(String[] args){
+//        Scanner ac=new Scanner(System.in);
+//        int []bc=new int[3];
+//        System.out.println("来看看你数学底子怎么样嘻嘻，看看你还记得不记得三角形的性质");
+//        //捕获异常通过try....catch来捕获，只需将需要捕获的步骤放进try....catch结构内即可
+//        for (int i=0;i<3;i++){
+//            try{//在该结构内将会捕获异常，如果你输入了本不应该的东西，比如说字母，就会让你重新输入哦~
+//                System.out.printf("请输入你第"+(i+1)+"个边长哦~OVO");
+//                bc[i]=ac.nextInt();
+//            }catch(Exception e){//Exception是所有异常的父类，也就是说catch将会捕获所有异常，而e只是一个用来存入错误信息的变量
+//                System.out.println("请问你输入了个啥让程序出错了？小心我让你飞起来！：）"+e.getMessage());
+//                ac.nextLine();//清除掉错误的输入
+//                i--;//让i自减，达到重新输入当前边长的目睹惩罚你重新输入呵呵
+//            }
+//        }
+//        sjxbc(bc[0],bc[1],bc[2]);
+//    }
+//        public static void sjxbc(int a, int b, int c){
+//            if(a+b<=c||a+c<b||b+c<=a){
+//                //抛出异常，如果不成立的话，不会吧不会吧真的有人忘了三角形的性质吗
+//                throw new IllegalArgumentException(a+","+b+","+c+"哦呀？看来你数学底子不太好呢，三角形两边之和要大于第三边哦");//System.out.println(a+","+b+","+c+",");
+//
+//            }else{
+//                System.out.println("不要小瞧了三角形的羁绊啊！：a=" +a+","+"b="+b+",c="+c);
+//            }
+//        }
+//}
+
+
+
+//day8.7测试类
+//Circle circle=new Circle(1.0);//生成Circle对象。
+//        Random r=new Random();//生成Random对象：Random r = new Random();
+//        int ra=r.nextInt(101);//生成随机整数：r.nextInt()
+//        Shape shape;
+//            if(ra % 2==0){
+//                shape=new Square(5);
+//                //如果此时为偶数，则将5传递进去
+//            }else{
+//                shape=new Circle(4);
+//                //如果此时为奇数，则将4传递进去
+//            }
+//            System.out.println("当前随机数为"+ra);//输出当前的随机数
+//            System.out.println(shape.toString());//最后输出上面判断的计算的值
+//            System.out.println(circle.toString());//调用对象的toString方法，输出对象的描述信息。
 
 
 
